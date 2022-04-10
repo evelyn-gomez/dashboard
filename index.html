@@ -3,14 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <link rel="stylesheet" href="style.css">
   <title>Dashboard Project</title>
 </head>
-<body>
+<body >
   <div class="container">
-    <div class="menu"></div>
-    <div class="header"></div>
-    <div class="content"></div>
-  </div>
+    <div class="sidebar">
+      <div class="dashboard-main">
+        <div class="dashboard-child">
+          <img class="shadow"id="logo-go" src="./assets/arcade-svgrepo-com.svg" alt="spaceship">
+        </div>
+        <div class="dashboard-child">
+          <h2>Dashboard</h2>
+        </div>
+      </div>
+      <div class="user-menu">
+        <ul>
+          <li>
+            <div>
+              <img src="./assets/home-circle.svg" alt="home" onchange="home-btn">
+            </div>
+            <div>
+              <p>Home</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="./assets/account-circle.svg" alt="account" onchange="accounts-btn">
+            </div>
+            <div>
+              <p>Accounts</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="./assets/bank-transfer.svg" alt="transfer&pay">
+            </div>
+            <div>
+              <p>Transfer & Pay</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="./assets/school-outline.svg" alt="school">
+            </div>
+            <div>
+              <p>Plan & Learn</p>  
+            </div>
+          </li>
+        </ul>
+      </div>
+        <div class="settings">
+          <ul class="setting-list">
+            <li>
+              <div>
+                <img src="./assets/cog-outline.svg" alt="settings"> 
+              </div>
+              <div>
+                <p>Settings</p> 
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="./assets/security.svg" alt="security-icon">
+              </div>
+              <div>
+                <p>Security</p>  
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="./assets/face-agent.svg" alt="customer-support-icon">
+              </div>
+              <div>
+                <p>Support</p>   
+              </div>
+            </li>
+          </ul>
+        </div>      
+    </div>
+    <div class="main-bar">
+      <div class="header">
+        <div class="header-intro">
+          <div>
+            <h1>Lorem ipsum </h1>
+          </div>
+          <div>
+            <p>Hi, welcome, User</p>
+          </div>
+        </div>
+        <div class="header-alerts">
+          <div class="alert-icons">
+            <div>search</div>
+            <div>messages</div>
+            <div>Alerts</div>
+          </div>
+          <div class="sign-off">
+            <div>
+              Sign-off
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="account-summary">
+          <div>Accounts</div>
+        </div>
+        <div class="trader-tools">
+          <div>Order Status</div>
+        </div>
+      </div>   
+    </div>
+  </div>    
 </body>
 </html>
