@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family:robobo, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:mainMilkMoney, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100%; 
 }
 html {
@@ -14,6 +14,11 @@ html {
 @font-face {
   font-family: milkMoney;
   src: url(./assets/fonts/lemon_milk/LEMONMILK-Bold.otf);
+}
+
+@font-face {
+  font-family: mainMilkMoney;
+  src: url(./assets/fonts/lemon_milk/LEMONMILK-Light.otf);
 }
 @font-face {
   font-family: roboBold;
@@ -49,15 +54,15 @@ body{
 
 .dashboard-main{
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr .2fr;
   place-content: center;
-  padding: 0rem 1rem 2rem 0rem;
+  padding: 0rem 0rem 1rem 0rem;
   justify-self: center;
 }
 
 #logo-go{
-  max-height: 6rem;
-  max-width: 5rem;  
+  max-height: 7rem;
+  max-width: 7rem; 
 }
 
 .shadow{
@@ -105,60 +110,82 @@ li > img{
 .user-menu, .settings{
   width: -webkit-fill-available;
 }
-.settings{
 
-}
-
-.settings > ul{
-
-}
 .main-bar{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 8fr;
-  border: 1px solid darkblue;
-
+  grid-template-rows: 1fr 6fr;
 }
 
 .header{
   display: grid;
-  gap: 5rem;
-  border: 1px solid pink;
+  flex-direction: row;
   grid-template-columns: repeat(2, 1fr);
-}
-
-h1{
+  border: 1px solid #add8e6;
 }
 
 .header-intro{
   display: grid;
   gap: 1rem;
-  border: 1px solid pink;
-
+}
+.header-intro > div{
+  padding: 0 5%;
 }
 
 .header-alerts{
   display: grid;
   gap: 1rem;
-  border: 1px solid blue ;
-  /* grid-template-columns: repeat(3, 1fr) ; */
-}
-.alert-icons{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.alert-icons > div {
-  
 }
 
+.alert-icons{
+  display: grid;
+  width: 100%;
+  height: min-content;
+  max-height: min-content;
+}
+
+ul#alert-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: end;
+  /* max-width: inherit; */
+}
+
+#alert-list > li {
+  display: inline-flex;
+  height: min-content;
+  padding-top: 5px;
+  flex-direction: row-reverse;
+}
 .sign-off{
+  display: inline-flex;
+  justify-content: flex-end;
+  height: min-content;
+}
+
+.sign-off >div{
+  display: inline-flex;
+  align-items: end;
+  padding-right: 1rem;
+}
+
+#log-off > p{
+  display: inline-flex;
+  align-items: center;
+}
+.sign-off:hover{
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  font-size: 1.1rem;
 }
 
 .main-content{
-
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  background-color: rgb(141 161 226 / 16%);
 
 }
 
-@media only screen and (max-width: 600px) {
+
+/* @media only screen and (max-width: 600px) {
   
-}
+} */
