@@ -26,6 +26,11 @@ html {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: paraFont;
+  src: url(./assets/fonts/lemon_milk/LEMONMILK-Regular.otf);
+}
+
 h2{
   font-family: milkMoney, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -180,12 +185,54 @@ ul#alert-list {
 
 .main-content{
   display: grid;
-  grid-template-columns: 1fr 2fr; 
+  grid-template-columns: 2fr .75fr; 
   background-color: rgb(141 161 226 / 16%);
-
+  font-family: robobo;
 }
 
+.account-summary {
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+}
 
+.account-summary, .trader-tools {
+  /* font-family: inherit; */
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding-left: 1rem;
+  
+}
+
+.card-summary{
+  display:grid; 
+  font-size: 12px;
+}
+
+.single-card{
+  display: grid;
+  box-shadow:  2px 1px 5px darkgrey;
+  width: calc(45% + 50%);
+  gap: 1rem;
+  height: calc(55% + 44%);
+}
+
+.card-para > p{
+  font-family: robobo;
+}
+
+.card-icons > div > img{
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.card-icons{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
 /* @media only screen and (max-width: 600px) {
   
 } */
