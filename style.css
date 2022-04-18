@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
   font-family:mainMilkMoney, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  height: 100%; 
 }
 html {
+  height: 100vh;
 }
 @font-face {
   font-family: robobo;
@@ -38,13 +38,13 @@ h2{
 body{
   display:block; 
   max-height: 100%;
-  height: 100vh;
 }
 
 .container{
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
+  position: relative;
 }
 
 .sidebar{
@@ -188,38 +188,51 @@ ul#alert-list {
   grid-template-columns: 2fr .75fr; 
   background-color: rgb(141 161 226 / 16%);
   font-family: robobo;
+  padding-bottom: 40px;
 }
 
 .account-summary {
   display: grid;
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: 1fr 16fr;
+}
+
+.account-header{
+  padding-left: 1rem;
 }
 
 .account-summary, .trader-tools {
-  /* font-family: inherit; */
+  padding-left: 1rem;
 }
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  padding-left: 1rem;
-  
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.card-summary{
-  display:grid; 
-  font-size: 12px;
+h5{
+  font-size:inherit;    
 }
 
 .single-card{
   display: grid;
   box-shadow:  2px 1px 5px darkgrey;
-  width: calc(45% + 50%);
+  grid-template-rows: 1fr 4fr 1fr;
   gap: 1rem;
+  padding-left: .75rem;
+  padding-right: 0.75rem;
   height: calc(55% + 44%);
+  background-color: white;
+  border-radius: 15px;
+  border-left: 6px solid lightpink;
+}
+.card-header{
+  align-self: end;
+}
+.card-para > p{
+  font-family: robobo;
 }
 
-.card-para > p{
+.inner-ann > p {
   font-family: robobo;
 }
 
@@ -228,10 +241,111 @@ ul#alert-list {
   max-height: 40px;
 }
 
+.card-icons > div:hover{
+  font-size: 1rem;
+}
+
+
 .card-icons{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-self: right;
+  gap: 1rem;
+}
+
+.tools{
+  display: grid;
+  grid-template-rows: 2.5fr 1fr;
+  gap: 20px; 
+  padding-left: 1rem;
+}
+
+#tool-header-1, .title-trending{
+  display:flex;
+  padding-left: 1rem;
+}
+
+.announcements{
+  display: grid;
+  grid-template-rows: 1.5fr 16fr;   
+  font-size: 15px;
+
+}
+
+.announcements p {
+  font-family: 'robobo';
+}
+
+.inner-ann > div{
   display: flex;
-  justify-content: flex-end;
-  padding-right: 10px;
+  flex-direction: column;
+  gap: 20px;
+  border-block-end: 3px solid darkslateblue;
+  writing-mode: horizontal-tb;
+}
+
+.outer-padding-inner-ann{
+  display: flex;
+  position: relative;
+  margin-left: 15px;
+  max-width: calc(100% - 50px);
+  justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+}
+
+h6{
+  font-size: 15px;
+}
+
+.inner-ann{
+  display: flex;
+  position: relative;
+  display: grid;
+  max-width: calc(100% - 50px);
+  justify-self: center;
+  gap: 15px;
+}
+
+.trending-padding{
+  display: grid;
+  margin-left: 15px;
+  max-width: calc(100% - 50px);
+}
+.trending{
+  display: grid;
+  gap: 15px;
+}
+
+.names-trending{
+  display:grid;
+  gap: 12px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.avatar-box{
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  max-width: fit-content;
+}
+
+.avatar-name:hover{
+  font-size: .9rem;
+}
+.avatar-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 9px;
+}
+
+.avatar{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 /* @media only screen and (max-width: 600px) {
   
