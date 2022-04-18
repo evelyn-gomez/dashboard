@@ -1,11 +1,13 @@
-* {
+html, body, * {
   margin: 0;
   padding: 0;
+}
+
+* {
   font-family:mainMilkMoney, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
-html {
-  height: 100vh;
-}
+
 @font-face {
   font-family: robobo;
   src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
@@ -37,29 +39,28 @@ h2{
 
 body{
   display:block; 
-  max-height: 100%;
+  height: 100vh;
 }
 
 .container{
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
-  position: relative;
+  height: inherit;
+  max-height: inherit;
 }
 
 .sidebar{
   display:grid;
   border: 1px solid lightblue;
-  display: grid;
-  justify-items: start; 
-  align-content: space-around;
   background-color: rgb(103 125 195);
   color: white;
+  height: inherit;
 }
 
 .dashboard-main{
   display: grid;
-  grid-template-rows: 1fr .2fr;
+  /* grid-template-rows: 1fr .2fr; */
   place-content: center;
   padding: 0rem 0rem 1rem 0rem;
   justify-self: center;
@@ -119,7 +120,10 @@ li > img{
 .main-bar{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 1fr 8fr;
+  height: inherit;
+  max-height: inherit;
+  overflow-x: hidden;
 }
 
 .header{
